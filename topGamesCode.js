@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
   user: 'root',
 
   // Your password
-  password: '',
+  password: 'nissan',
   database: 'top_boardgamesDB',
 });
 
@@ -27,28 +27,27 @@ const runSearch = () => {
       type: 'list',
       message: 'What would you like to do?',
       choices: [
-        'Find songs by artist',
-        'Find all artists who appear more than once',
-        'Find data within a specific range',
-        'Search for a specific song',
+        'Find games by number of players',
+        'Find games within a specific genre',
+        'Search for a specific game',
         'exit',
       ],
     })
     .then((answer) => {
       switch (answer.action) {
-        case 'Find songs by artist':
-          artistSearch();
+        case 'Find games by number of players':
+          playerSearch();
           break;
 
-        case 'Find all artists who appear more than once':
+        case 'Find all games who have the same rating':
           multiSearch();
           break;
 
-        case 'Find data within a specific range':
+        case 'Find games within a specific genre':
           rangeSearch();
           break;
 
-        case 'Search for a specific song':
+        case 'Search for a specific game':
           songSearch();
           break;
 
@@ -63,20 +62,20 @@ const runSearch = () => {
     });
 };
 
-const artistSearch = () => {
+const gameSearch = () => {
   inquirer
     .prompt({
-      name: 'artist',
+      name: 'game',
       type: 'input',
-      message: 'What artist would you like to search for?',
+      message: 'What boardgame would you like to search for?',
     })
     .then((answer) => {
-      const query = 'SELECT position, song, year FROM top5000 WHERE ?';
-      connection.query(query, { artist: answer.artist }, (err, res) => {
+      const query = 'SELECT name, genre, players, rate FROM top100games WHERE ?';
+      connection.query(query, { game: answer.game }, (err, res) => {
         if (err) throw err;
-        res.forEach(({ position, song, year }) => {
+        res.forEach(({ genre, players, rate }) => {
           console.log(
-            `Position: ${position} || Song: ${song} || Year: ${year}`
+            `Game: ${game} || Players: ${players} || Rating: ${rating}`
           );
         });
         runSearch();
@@ -86,21 +85,21 @@ const artistSearch = () => {
 
 const multiSearch = () => {
   const query =
-    'SELECT artist FROM top5000 GROUP BY artist HAVING count(*) > 1';
+    'SELECT game FROM top100 game BY genre HAVING players (*) > 1';
   connection.query(query, (err, res) => {
     if (err) throw err;
-    res.forEach(({ artist }) => console.log(artist));
+    res.forEach(({ game }) => console.log(game));
     runSearch();
   });
 };
 
-const rangeSearch = () => {
+const genreSearch = () => {
   inquirer
     .prompt([
       {
         name: 'start',
         type: 'input',
-        message: 'Enter starting position: ',
+        message: 'Enter starting genre: ',
         validate(value) {
           if (isNaN(value) === false) {
             return true;
@@ -111,7 +110,7 @@ const rangeSearch = () => {
       {
         name: 'end',
         type: 'input',
-        message: 'Enter ending position: ',
+        message: 'Enter ending genre: ',
         validate(value) {
           if (isNaN(value) === false) {
             return true;
@@ -122,12 +121,12 @@ const rangeSearch = () => {
     ])
     .then((answer) => {
       const query =
-        'SELECT position,song,artist,year FROM top5000 WHERE position BETWEEN ? AND ?';
+        'SELECT game,genre,players,rating FROM top100 WHERE position BETWEEN ? AND ?';
       connection.query(query, [answer.start, answer.end], (err, res) => {
         if (err) throw err;
-        res.forEach(({ position, song, artist, year }) =>
+        res.forEach(({ genre, players, game, rating }) =>
           console.log(
-            `Position: ${position} || Song: ${song} || Artist: ${artist} || Year: ${year}`
+            `Game: ${game} || Players: ${players} || Genre: ${genre} || Rating: ${rating}`
           )
         );
         runSearch();
@@ -135,27 +134,27 @@ const rangeSearch = () => {
     });
 };
 
-const songSearch = () => {
+const Search = () => {
   inquirer
     .prompt({
-      name: 'song',
+      name: 'player',
       type: 'input',
-      message: 'What song would you like to look for?',
+      message: 'How many players are playing?',
     })
     .then((answer) => {
       console.log(`You searched for "${answer.song}"`);
       connection.query(
-        'SELECT * FROM top5000 WHERE ?',
-        { song: answer.song },
+        'SELECT * FROM top100 WHERE ?',
+        { game: answer.game },
         (err, res) => {
           if (err) throw err;
           if (res[0]) {
             console.log(
-              `Position: ${res[0].position} || Song: ${res[0].song} || Artist: ${res[0].artist} || Year: ${res[0].year}`
+              `Genre: ${res[0].genre} || Players: ${res[0].players} || Game: ${res[0].game} || Rating: ${res[0].rating}`
             );
             runSearch();
           } else {
-            console.error('Song not found :(\n');
+            console.error('game not found :(\n');
             runSearch();
           }
         }
