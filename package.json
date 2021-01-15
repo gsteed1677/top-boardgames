@@ -1,6 +1,7 @@
 {
   "name": "top-boardgames",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "",
   "main": "topGamesCode.js",
   "scripts": {
@@ -11,5 +12,30 @@
   "dependencies": {
     "inquirer": "^6.2.1",
     "mysql": "^2.16.0"
+=======
+  "description": "board game search",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsteed1677/top-boardgames.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gsteed1677/top-boardgames/issues"
+  },
+  "homepage": "https://github.com/gsteed1677/top-boardgames#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.3.5"
+>>>>>>> 5648ee879aab34e8788ad7a566fc6f36d30449fd
   }
 }
