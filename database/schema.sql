@@ -4,10 +4,10 @@ CREATE database top_boardgamesDB;
 USE top_boardgamesDB;
 
 CREATE TABLE top100 (
-  position INT NOT NULL,
-  genre VARCHAR(100) NULL,
-  game VARCHAR(100) NULL,
-  players INT,
+  rating INT NOT NULL,
+  genre VARCHAR NULL,
+  game VARCHAR NULL,
+  players INT NULL,
   
 );
 
