@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
   user: 'root',
 
   // Your password
-  password: '',
+  password: 'nissan',
   database: 'top_boardgamesDB',
 });
 
