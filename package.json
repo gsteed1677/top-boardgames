@@ -1,18 +1,6 @@
 {
   "name": "top-boardgames",
   "version": "1.0.0",
-<<<<<<< HEAD
-  "description": "",
-  "main": "topGamesCode.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "inquirer": "^6.2.1",
-    "mysql": "^2.16.0"
-=======
   "description": "board game search",
   "main": "server.js",
   "scripts": {
@@ -36,6 +24,5 @@
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "sequelize": "^6.3.5"
->>>>>>> 5648ee879aab34e8788ad7a566fc6f36d30449fd
   }
 }
