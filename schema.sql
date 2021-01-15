@@ -11,4 +11,4 @@ CREATE TABLE top100 (
   
 );
 
-SELECT * FROM top5000;
+SELECT * FROM top100;
