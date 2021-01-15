@@ -1,7 +1,7 @@
-var passport = require("passport");
-var LocalStrategy = require("passport-local").Strategy;
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
 
-var db = require("../models");
+const db = require("../models");
 
 // passport to use LocalStrat
 passport.use(new LocalStrategy(
