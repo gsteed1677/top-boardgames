@@ -9,7 +9,7 @@ module.exports = function (app) {
     if (req.user) {
       res.redirect("/users");
     }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
+    res.sendFile(path.join(__dirname, "../public/signup.handlebars"));
   });
 
   app.get("/login", function (req, res) {
@@ -17,11 +17,11 @@ module.exports = function (app) {
     if (req.user) {
       res.redirect("/users");
     }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.sendFile(path.join(__dirname, "../public/login.handlebars"));
   });
 
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/users", isAuthenticated, function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/user.html"));
+    res.sendFile(path.join(__dirname, "../public/user.handlebars"));
   });
 };
