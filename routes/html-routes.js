@@ -11,7 +11,7 @@ module.exports = function (app) {
   })
 
   app.get('/signup',  (req, res) => {
-    res.render('index')
+    res.render('signup')
   })
 
   app.get('/login',  (req, res) => {
@@ -19,7 +19,7 @@ module.exports = function (app) {
   })
 
   app.get('/contact',  (req, res) => {
-    res.render('index')
+    res.render('contact')
   })
 
   app.get('/forum',  (req, res) => {
@@ -30,6 +30,9 @@ module.exports = function (app) {
     res.render('recommended')
   })
 
+    app.get('/about',  (req, res) => {
+    res.render('about')
+  })
   // app.get("/signup", function (req, res) {
   //   // If the user already has an account send them to the members page
   //   if (req.user) {
