@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
+  <title>Signup Page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -75,58 +75,63 @@
       </div>
     </nav>
   </body>
+  <section class="section">
+    <div class="container">
+      <div class="content-has-centered">
+        <h1 class="title content-has-centered">
+          Signup for an Account!
+        </h1>
 
-  <!--Login Card-->
-  <div class="container">
-    <div class="title">
-      Login or Create Account
-    </div>
-    <section class="hero is-primary is-fullheight">
-      <div class="hero-body is is-centered">
-        <div class="container">
-          <div class="column is-centered">
-            <div class="column is-5-tablet is-4-desktop is-3-widescreen">
-              <form action="" class="box">
-                <div class="field">
-                  <label for="" class="label">Email</label>
-                  <div class="control has-icons-left">
-                    <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" required>
-                    <span class="icon is-small is-left">
-                      <i class="fa fa-envelope"></i>
-                    </span>
-                  </div>
-                </div>
-                <div class="field">
-                  <label for="" class="label">Password</label>
-                  <div class="control has-icons-left">
-                    <input type="password" placeholder="*******" class="input" required>
-                    <span class="icon is-small is-left">
-                      <i class="fa fa-lock"></i>
-                    </span>
-                  </div>
-                </div>
-                <div class="field">
-                  <label for="" class="checkbox">
-                    {{!-- <input type="checkbox">
-                    Remember me
-                  </label> --}}
-                </div>
-                <div class="field">
-                  <button class="button is-success">
-                    Login
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
       </div>
-    </section>
-    <div class="content has-text-centered">
-      <p>
-        <strong>Top Board Games</strong> by <a href="https://jgthms.com">Team Trenton 1</a>.
-      </p>
+
     </div>
+
+  </section>
+  <!--Form Section-->
+  <div class="container">
+    <div class="field">
+      <label class="label">First Name</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Jimmy Neutron">
+      </div>
+      <p class="help">Enter your first name.</p>
+    </div>
+    <div class="field">
+      <label class="label">Last Name</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Last name">
+      </div>
+      <p class="help">Enter your last name.</p>
+    </div>
+    <div class="field">
+      <label class="label">Username</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Username">
+      </div>
+      <p class="help">Enter your Username</p>
+    </div>
+    <div class="field">
+      <label class="label">Password</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Password">
+      </div>
+      <p class="help">Enter your Password</p>
+    </div>
+
+    <!--Buttons-->
+    <div class="buttons">
+      <button class="button is-info is-outlined">Submit</button>
+      <button class="button is-success is-outlined">Help</button>
+    </div>
+
+
+    <!--Footer-->
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Top Board Games</strong> by <a href="https://jgthms.com">Team Trenton 1</a>.
+        </p>
+      </div>
     </footer>
 </body>
 

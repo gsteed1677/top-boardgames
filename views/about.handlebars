@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>About Page</title>
 </head>
 
 <body>
@@ -76,58 +76,36 @@
     </nav>
   </body>
 
-  <!--Login Card-->
-  <div class="container">
-    <div class="title">
-      Login or Create Account
-    </div>
-    <section class="hero is-primary is-fullheight">
-      <div class="hero-body is is-centered">
-        <div class="container">
-          <div class="column is-centered">
-            <div class="column is-5-tablet is-4-desktop is-3-widescreen">
-              <form action="" class="box">
-                <div class="field">
-                  <label for="" class="label">Email</label>
-                  <div class="control has-icons-left">
-                    <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" required>
-                    <span class="icon is-small is-left">
-                      <i class="fa fa-envelope"></i>
-                    </span>
-                  </div>
-                </div>
-                <div class="field">
-                  <label for="" class="label">Password</label>
-                  <div class="control has-icons-left">
-                    <input type="password" placeholder="*******" class="input" required>
-                    <span class="icon is-small is-left">
-                      <i class="fa fa-lock"></i>
-                    </span>
-                  </div>
-                </div>
-                <div class="field">
-                  <label for="" class="checkbox">
-                    {{!-- <input type="checkbox">
-                    Remember me
-                  </label> --}}
-                </div>
-                <div class="field">
-                  <button class="button is-success">
-                    Login
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
+  <!--Card Section w/ info-->
+  <section class="hero is-link is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          About Us
+        </h1>
+        <h2 class="subtitle">
+          We are 5 aspiring full stack web developers! All of us currently attend the DU full stack coding bootcamp.
+          In this project 2 we are creating a full stack website using Bulma, Express-Handlebars, MySQL, API routes to
+          a boardgame API
+          where we will create a database of 100 boardgames to choose from and CSS.
+        </h2>
       </div>
-    </section>
+    </div>
+    <!--Button Links-->
+    <div class="buttons">
+      <button class="button is-info">Home</button>
+      <button class="button is-success">GitHub</button>
+    </div>
+  </section>
+  <!--Footer-->
+  <footer class="footer">
     <div class="content has-text-centered">
       <p>
         <strong>Top Board Games</strong> by <a href="https://jgthms.com">Team Trenton 1</a>.
       </p>
     </div>
-    </footer>
+  </footer>
+
 </body>
 
 </html>
