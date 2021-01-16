@@ -1,50 +1,42 @@
-</html>
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="en">
-=======
-<html>
->>>>>>> 867b748dd785fa64306984351ba47b25e83d6840
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Top Boardgames</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <title>Recommended Page</title>
+
 </head>
 
 <body>
 
-<<<<<<< HEAD
-</body>
-
-</html>
-=======
     <body>
         <!--Navbar-->
         <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" href="https://www.boardgameatlas.com/">
-                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-                </a>
+                {{!-- <a class="navbar-item" href="https://www.boardgameatlas.com/"> --}}
+                    <a class="navbar-item" href="https://www.boardgameatlas.com/">
+                        <i class="fas fa-dice-d20 fa-2x"></i></i>
+                    </a>
 
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasic">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                        data-target="navbarBasic">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
             </div>
 
             <div id="navbarBasic" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="./about.handlebars">
                         Home
                     </a>
 
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="./recommended.handlebars">
                         Recommended
                     </a>
 
@@ -54,13 +46,13 @@
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item">
+                            <a class="navbar-item" href="./about.handlebars">
                                 About
                             </a>
-                            <a class="navbar-item">
+                            <a class="navbar-item" href="./forum.handlebars">
                                 Forum
                             </a>
-                            <a class="navbar-item">
+                            <a class="navbar-item" href="./contact.handlebars">
                                 Contact
                             </a>
                             <hr class="navbar-divider">
@@ -74,14 +66,12 @@
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
-                            <div class="button">
-                                <a class="button is-primary" href="/login.html">
-                                    <strong>Sign up</strong>
-                                </a>
-                                <a class="button is-light" href="/login.html">
-                                    Log in
-                                </a>
-                            </div>
+                            <a class="button is-primary" href="./signup.handlebars">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a class="button is-light" href="./login.handlebars">
+                                Log in
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -128,7 +118,8 @@
 
 </html>
 
-{{!-- <!--Footer-->
+{{!--
+<!--Footer-->
 <footer class="footer">
     <div class="content has-text-centered">
         <p>
@@ -139,4 +130,3 @@
 </body>
 
 </html> --}}
->>>>>>> 867b748dd785fa64306984351ba47b25e83d6840
