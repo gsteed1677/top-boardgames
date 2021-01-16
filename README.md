@@ -42,7 +42,8 @@ This application allows the user to search the BoardGameAtlas API for any board 
     : [Garret Steed](https://github.com/gsteed1677)
 <br />
 <br />
-:octocat: Find me on GitHub: - [Garret Steed](https://github.com/gsteed1677)
+:octocat: Find me on GitHub: 
+- [Garret Steed](https://github.com/gsteed1677)
 
 <br />
 ✉Email me with any questions: <br /><br>
