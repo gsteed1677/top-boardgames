@@ -1,4 +1,5 @@
 const express = require("express");
+const expresshbs = require("express-handlebars");
 const session = require("express-session");
 const passport = require("./config/passport");
 
@@ -9,13 +10,16 @@ const db = require("./models");
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
+// app.use(express.static("public"));
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
 );
 app.use(passport.initialize());
 app.use(passport.session());
+ 
+app.engine('handlebars', expresshbs({ defaultLayout: 'main'}));
+app.set('view engine', 'handlebars')
 // Requiring our routes
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
