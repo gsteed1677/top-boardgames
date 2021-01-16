@@ -1,100 +1,100 @@
-1,Root,RPG,2-4,Teen,80,
-2,Scythe,RPG,1-5,Teen,80,
-3,Gloom,RPG,1-4,Adult,84,
-4,Wingspan,Strategic,1-5,Teen,81,
-5,Terraforming Mars,Strategic,1-5,Teen,79,
-6,Azul,Puzzle,2-4,Family,76,
-7,Pandemic,Strategic,2-4,Family,72,
-8,Viticulture: Essential Edition,Strategic,1-6,Family,79,
-9,Codenames,Strategic,2-8,Family,73,
-10,7 Wonders,Fantasy,2-7,Teen,73,
-11,Spirit Island,Fantasy,1-4,Family,80,
-12,7 Wonders Duel,RPG,2-7,Teen,73,
-13,The Castle of Burgundy,RPG,2-4,Teen,80,
-14,Carcassonne,RPG,2-5,Teen,70,
-15,Pandemic Legacy: Season 1,Strategic,2-4,Family,84,
-16,Splendor,Strategic,2-4,Teen,70
-17,Concordia,Adventure,2-5,Teen,82,
-18,Ticket To Ride,Strategic,2-5,Teen,70,
-19,Race for the Galaxy,Strategic,2-4,Teen,76,
-20,Patchwork,Puzzle,2,Adult,73,
-21,Catan,Adventure,3-4,Teen,64,
-22,Santorini,Adventure,2-4,Family,73,
-23,Everdell,Fantasy,1-4,Teen,79,
-24,Jaipur,Puzzle,2,Adult,73,
-25,Brass: Birmingham,Strategic,2-4,Teen,85,
-26,Love Letter,Puzzle,2-4,Teen,68,
-27,Kingdomino,Fantasy,2-4,Teen,71,
-28,Great Western Trail,Strategic,2-4,Teen,81,
-29,King of Tokyo,Strategic,2-6,Teen,66,
-30,Lords of Waterdeep,Strategic,2-5,Teen,73
-31,The Quacks of Quedlinburg,Adventure,2-4,Family,79
-33,Star Realms,Strategic,2,Adult,71
-Clank! A Deck-Building Adventure,Adventure,2-4,Teen,75
-34,Puerto Rico,Strategic,2-5,Teen,75
-35,Architects of the West Kingdom,Strategic,1-5,Teen,78
-36,Blood Rage,Fantasy,2-4,Teen,75
-37,Welcome to...,Strategic,1-100,Family,76
-38,Small World,Fantasy,2-5,Teen,67
-39,Orleans,Strategic,2-4,Teen,80
-40,Five Tribes,Fantasy,2-4,Teen,76
-41,Clans of Caledonia,Strategic,1-4,Teen,81
-42,Dead of Winter: A Crossroads Game,RPG,2-5,Teen,72
-43,Forbidden Island,Fantasy,2-4,Teen,65
-44,Sagrada,Strategic,1-4,Adult,72
-45,Arkham Horror: The Card Game,RPG,Adult,78
-46,Sushi Go!,Adventure,Family,67
-47,Tzolk'in: The Mayan Calendar
-48,Lost Cities
-49,Roll For The Galaxy
-50,Ticket to Ride: Europe
-51,Power Grid
-52,Coup
-53,Star Wars: Rebelion
-54,Robinson Crusoe: Adventures on the Cursed Island
-55,Raiders of the North Sea
-56,Sushi Go Party!
-57,Dixit
-58,Inis
-59,Dominion: Second Edition
-60,Hanabi
-61,A Feast for Odin
-62,Twilight Struggle
-63,Terra Mystica
-64,Stone Age
-65,Cosmic Encounter
-66,The Resistance
-67,Takenoko
-68,Agricola (Revised Edition)
-69,Sheriff of Nottingham
-70,Star Wars Imperial Assault
-71,Istanbul
-72,Mysterium
-73,Forbidden Desert
-74,Caverna: The Cave Farmers
-75,Gaia Project
-76,For Sale
-77,Betrayal at House on the Hill
-78,Champions of Midgard
-79,The Mind
-80,Deception: Murder in Hong Kong
-81,Mansions of Madness: Second Edition
-82,Mage Madness
-83,Subrbia
-84,Food Chain Magnate
-85,Keyflower
-86,Pax Pamir (Second Edition)
-87,Century: Spice Road
-88,Isle of Skye: From Chieftain to King
-89,Arboretum
-90,Bohnanza
-91,Onitama
-92,The Resistance: Avalon
-93,The Crew: The Quest for Planet Nine
-94,Teotihuacan: City of Gods
-95,Agricola
-96,Hive
-97,Castles of Mad King Ludwig
-98,The Voyages of Marco Polo
-99,One Night Ultimate Werewolf
-100,Galaxy Trucker
+1,Root,2-4,RPG,80
+2,Scythe,1-5,RPG,80
+3,Gloom,1-4,RPG,84
+4,Wingspan,1-5,Strategic,81
+5,Terraforming Mars,1-5,Strategic,79
+6,Azul,2-4,Puzzle,76
+7,Pandemic,2-4,Strategic,72
+8,Viticulture: Essential Edition,1-6,Strategic,79
+9,Codenames,2-8,Strategic,73
+10,7 Wonders,2-7,Fantasy,73
+11,Spirit Island,1-4,Fantasy,80
+12,7 Wonders Duel,2-7,RPG,73
+13,The Castle of Burgundy,2-4,RPG,80
+14,Carcassonne,2-5,RPG,70
+15,Pandemic Legacy: Season 1,2-4,Strategic,84
+16,Splendor,2-4,Strategic,70
+17,Concordia,2-5,Adventure,82
+18,Ticket To Ride,2-5,Strategic,70
+19,Race for the Galaxy,2-4,Strategic,76
+20,Patchwork,2,Puzzle,73
+21,Catan,3-4,Adventure,64
+22,Santorini,2-4,Adventure,73
+23,Everdell,1-4,Fantasy,79
+24,Jaipur,2,Puzzle,73
+25,Brass: Birmingham,2-4,Strategic,85
+26,Love Letter,2-4,Puzzle,68
+27,Kingdomino,2-4,Fantasy,71
+28,Great Western Trail,2-4,Strategic,81
+29,King of Tokyo,2-6,Strategic,66
+30,Lords of Waterdeep,2-5,Strategic,73
+31,The Quacks of Quedlinburg,2-4,Adventure,79
+33,Star Realms,2,Strategic,71
+Clank! A Deck-Building Adventure,2-4,Adventure,75
+34,Puerto Rico,2-5,Strategic,75
+35,Architects of the West Kingdom,1-5,Strategic,78
+36,Blood Rage,2-4,Fantasy,75
+37,Welcome to...,1-100,Strategic,76
+38,Small World,2-5,Fantasy,67
+39,Orleans,2-4,Strategic,80
+40,Five Tribes,2-4,Fantasy,76
+41,Clans of Caledonia,1-4,Strategic,81
+42,Dead of Winter: A Crossroads Game,2-5,RPG,72
+43,Forbidden Island,2-4,Fantasy,65
+44,Sagrada,1-4,Strategic,,72
+45,Arkham Horror: The Card Game,1-2,RPG,78
+46,Sushi Go!,2-5,Adventure,67
+47,Tzolk'in: The Mayan Calendar,2-4,Strategic,76
+48,Lost Cities,2,Adventure,70
+49,Roll For The Galaxy,2-5,Strategic,75
+50,Ticket to Ride: Europe,2-5,Adventure,72
+51,Power Grid,2-6,Puzzle,74
+52,Coup,2-6,Fantasy,65
+53,Star Wars: Rebellion,2-4,RPG,80
+54,Robinson Crusoe: Adventures on the Cursed Island,1-4,Adventure,75
+55,Raiders of the North Sea,2-4,RPG,77
+56,Sushi Go Party!,2-8,Family,70
+57,Dixit,3-6,Fantasy,67
+58,Inis,2-4,Fantasy,78
+59,Dominion: Second Edition,2-4,Adventure,70
+60,Hanabi,2-5,Adventure,65
+61,A Feast for Odin,1-4,Strategic,79
+62,Twilight Struggle,2,Puzzle,77
+63,Terra Mystica,2-5,RPG,77
+64,Stone Age,2-5,Adventure,72
+65,Cosmic Encounter,3-5,Fantasy,72
+66,The Resistance,5-10,Strategic,68
+67,Takenoko,2-4,Family,68
+68,Agricola (Revised Edition),1-4,Fantasy,74
+69,Sheriff of Nottingham,3-5,Strategic,66
+70,Star Wars Imperial Assault,2-5,RPG,75
+71,Istanbul,2-5,Adventure,75
+72,Mysterium,2-7,Fantasy,68
+73,Forbidden Desert,2-5,Adventure,66
+74,Caverna: The Cave Farmers,1-7,RPG,76
+75,Gaia Project,1-4,Fantasy,83
+76,For Sale,3-6,Family,70
+77,Betrayal at House on the Hill,3-6,Strategic,63
+78,Champions of Midgard,2-4,Fantasy,78
+79,The Mind,1-4,Puzzle,68
+80,Deception: Murder in Hong Kong,4-12,RPG,72
+81,Mansions of Madness: Second Edition,1-5,Adventure,74
+82,Mage Knight,1-4,RPG,76
+83,Subrbia,1-4,Family,72
+84,Food Chain Magnate,2-5,Family,81
+85,Keyflower,2-6,Adventure,76
+86,Pax Pamir (Second Edition),1-5,Puzzle,88
+87,Century: Spice Road,2-5,Fantasy,71
+88,Isle of Skye: From Chieftain to King,2-5,Adventure,72
+89,Arboretum,2-4,RPG,72
+90,Bohnanza,2-7,Strategic,68
+91,Onitama,2,Puzzle,71
+92,The Resistance: Avalon,5-10,RPG,72
+93,The Crew: The Quest for Planet Nine,2-5,Fantasy,86
+94,Teotihuacan: City of Gods,1-4,Fantasy,79
+95,Agricola,1-5,Fantasy,78
+96,Hive,2,Puzzle,70
+97,Castles of Mad King Ludwig,1-4,RPG,71
+98,The Voyages of Marco Polo,2-4,Adventure,78
+99,One Night Ultimate Werewolf,3-10,Fantasy,67
+100,Galaxy Trucker,2-4,RPG,70
