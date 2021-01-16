@@ -7,8 +7,8 @@ CREATE TABLE top100 (
   rating INT NOT NULL,
   genre VARCHAR NULL,
   game VARCHAR NULL,
-  players INT NULL,
-  
+  players INT NULL
+
 );
 
 SELECT * FROM top100;
