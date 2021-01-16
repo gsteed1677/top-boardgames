@@ -13,7 +13,7 @@ board games on the database. In addition, the user will be able to create and ac
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Tests](#tests)
+- [Technology](#technology)
 - [Questions](#questions)
 
 ### Installation
