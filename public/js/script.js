@@ -1,31 +1,44 @@
 
-//login event listeners
-const loginButton = $("#loginButton")
-const loginForm = $(".loginForm")
-const loginUsername = $("#loginUsernameInput");
-const loginPassword = $("#loginPasswordInput");
+//on click to get client api 
+description.on("click", function (event) {
 
-loginForm.on("submit", event => {
-  event.preventDefault();
-  let username = loginUsername.val().trim();
-  let password = loginPassword.val().trim();
-  let loginObj = {
-    username: username,
-    password: password
-  }
+  let name = $(this).data('name');
+  let queryUrl = "https://www.boardgameatlas.com/api/search?name=" + name + "&client_id=kyVOUd1oPF"
+  $("#").empty();
   $.ajax({
     method: "GET",
-    url: "/user/login",
-    data: loginObj
-  }).then(() => {
-    window.location.href = "/user";
-  })
+    url: queryUrl
+  }).then(data => {
 
+    generateDescription(data)
+
+  })
 })
 
-//sign up event listeners
+//on click event
+$(document).on("click", event => {
+  $("#").empty();
+})
+
+
+//sign up globals
 const signUpEmail = $("#signUpEmail");
 const signUpFirstname = $("#signUpFirstname");
 const signUpLastname = $("#signUpLastname");
 const signUpUsername = $("#signUpUsername");
 const signUpPassword = $("#signUpPassword");
+const signUpButton = $("#signUpBtn");
+const signUpForm = $("#signUpForm");
+
+
+
+let user = {
+    email: signUpEmail.val().trim(),
+    firstname: signUpFirstname.val().trim(),
+    lastname: signUpLastname.val().trim(),
+    username: signUpUsername.val().trim(),
+    password: signUpPassword.val().trim(),
+  };
+  return user;
+
+
