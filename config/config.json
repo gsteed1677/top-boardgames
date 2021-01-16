@@ -2,7 +2,11 @@
  {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "FSDMCarbonaraP123~",
+=======
+    "password": "CEXU5186",
+>>>>>>> ef781974b8f202df8cd63fead27d1933dec092d0
     "database": "top_boardgamesDB",
     "host": "127.0.0.1",
 
