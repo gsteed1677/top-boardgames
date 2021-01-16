@@ -3,9 +3,9 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "#",
+    "database": "top_boardgamesDB",
     "host": "127.0.0.1",
-    
+
     "dialect": "mysql"
   },
   "test": {
