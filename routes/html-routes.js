@@ -1,10 +1,9 @@
 var path = require("path");
-const { ConnectionError } = require("sequelize/types");
 // var router = express.Router()
 
 
 // Requiring our custom middleware for checking if a user is logged in
-var isAuthenticated = require("../config/middleware/isAuthenticated");
+// var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function (app) {
   app.get('/',  (req, res) => {
@@ -16,19 +15,19 @@ module.exports = function (app) {
   })
 
   app.get('/login',  (req, res) => {
-    res.render('index')
+    res.render('login')
   })
 
   app.get('/contact',  (req, res) => {
     res.render('index')
   })
 
-  app.get('/form',  (req, res) => {
-    res.render('index')
+  app.get('/forum',  (req, res) => {
+    res.render('forum')
   })
 
   app.get('/recommended',  (req, res) => {
-    res.render('index')
+    res.render('recommended')
   })
 
   // app.get("/signup", function (req, res) {
