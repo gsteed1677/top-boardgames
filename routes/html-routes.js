@@ -11,7 +11,7 @@ module.exports = function (app) {
   })
 
   app.get('/signup',  (req, res) => {
-    res.render('index')
+    res.render('signup')
   })
 
   app.get('/login',  (req, res) => {
