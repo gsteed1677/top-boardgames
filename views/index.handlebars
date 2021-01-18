@@ -32,11 +32,11 @@
 
             <div id="navbarBasic" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="./about.handlebars">
+                    <a class="navbar-item" href="/about">
                         Home
                     </a>
 
-                    <a class="navbar-item" href="./recommended.handlebars">
+                    <a class="navbar-item" href="/recommended">
                         Recommended
                     </a>
 
@@ -46,13 +46,13 @@
                         </a>
 
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="./about.handlebars">
+                            <a class="navbar-item" href="/about">
                                 About
                             </a>
-                            <a class="navbar-item" href="./forum.handlebars">
+                            <a class="navbar-item" href="/forum">
                                 Forum
                             </a>
-                            <a class="navbar-item" href="./contact.handlebars">
+                            <a class="navbar-item" href="/contact">
                                 Contact
                             </a>
                             <hr class="navbar-divider">
@@ -66,10 +66,10 @@
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
-                            <a class="button is-primary" href="./signup.handlebars">
+                            <a class="button is-primary" href="/signup">
                                 <strong>Sign up</strong>
                             </a>
-                            <a class="button is-light" href="./login.handlebars">
+                            <a class="button is-light" href="/login">
                                 Log in
                             </a>
                         </div>
@@ -90,10 +90,10 @@
             </div>
             <div class="field is-grouped">
                 <p class="control is-expanded">
-                    <input class="input" type="text" placeholder="Find a Board Game!">
+                    <input class="input" type="text" placeholder="Find a Board Game!" id="apiInput">
                 </p>
                 <p class="control">
-                    <a class="button is-info">
+                    <a class="button is-info" id="searchClick">
                         Search
                     </a>
                 </p>
@@ -107,7 +107,7 @@
                 <div class="tile">
                     <div class="tile is-parent is-vertical">
                         <article class="tile is-child notification is-primary">
-                            <p class="title">Rankings</p>
+                            <p class="title"></p>
                             <p class="subtitle">New winners</p>
                         </article>
                         <article class="tile is-child notification is-warning">
@@ -136,25 +136,25 @@
                     </article>
                 </div>
             </div>
-            <<<<<<< HEAD </TitleCard>
-                =======
-                <div class="tile is-parent">
-                    <article class="tile is-child notification is-success">
-                        <div class="content">
-                            <p class="title">Newsroom</p>
-                            <p class="subtitle">New games coming soon!
-                                alk;elaf;dafkhs;dfhiaoehf;aksdf;aekjfanaeikjaiokjfa;'nmj;oaikeifghWO:ILEJGa;oikrnjaoergaerglzhOGIT;joawp4905t0qat9g349in
-                                fsdaf </p>
-                            <div class="content">
-                                <!-- Content -->
-                            </div>
-                        </div>
-                    </article>
+    </TitleCard>
+
+    <div class="tile is-parent">
+        <article class="tile is-child notification is-success">
+            <div class="content">
+                <p class="title" id="gameName"></p>
+                <p class="subtitle">New games coming soon!
+                </p>
+                <div class="content">
+                    <a href="#" class='descriptionLink' data-name='{{this.game.dataValues.name}}'>Description</a>
+                    <!-- Content -->
+                    <div class='container' id='infoDiv'></div>
                 </div>
-        </div>
+            </div>
+        </article>
+    </div>
+    </div>
     </TitleCard>
 </body>
->>>>>>> d11cd27189935dee61681239029f24cf110af0b9
 
 
 
@@ -168,4 +168,6 @@
     </div>
 </footer>
 
-<script src="/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
