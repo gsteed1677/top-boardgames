@@ -3,6 +3,17 @@ CREATE database topboardgames_DB;
 
 USE topboardgames_DB;
 
+CREATE TABLE users
+(
+	id int NOT NULL AUTO_INCREMENT,
+	userName VARCHAR(20) UNIQUE NOT NULL,
+  firstName VARCHAR(20),
+	lastName VARCHAR(20),
+  email VARCHAR(100),
+	PRIMARY KEY (id)
+);
+
+
 CREATE TABLE top100 (
 
   game VARCHAR NULL,

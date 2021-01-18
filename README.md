@@ -14,7 +14,7 @@ board games on the database. In addition, the user will be able to create and ac
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Technology](#technology)
-- [Questions](#questions)
+- [Contributing](#contributing)
 
 ### Installation
 
