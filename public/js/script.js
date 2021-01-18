@@ -1,49 +1,63 @@
-
+$(document).ready(function () {
 //on click to get client api 
-$("#searchApi").on("click", function (event) {
+$("#searchClick").on("click", function (event) {
 
-  let name = $(this).data('name');
-  let queryUrl = "https://www.boardgameatlas.com/api/search?name=" + name + "&client_id=kyVOUd1oPF"
+  let name = $("#apiInput").val();
+  let queryUrl = "https://api.boardgameatlas.com/api/search?name=" + name + "&client_id=kyVOUd1oPF"
 
   $.ajax({
     method: "GET",
     url: queryUrl
   }).then(data => {
-
+    console.log(data)
+    $("#gameName").text(name)
     callGame(data)
 
   })
 })
 
-function callGame(data) {
-  let newDiv = $("<div class='gameSearch'>");
-  let descriptionDiv = $("<div>")
-  let newH6 = $("<h6>");
-  newH6.text("Description: ")
-  newDiv.append(descriptionDiv);
-  descriptionDiv.append(newH6, data.games[0].description_preview);
-  $("#infoDiv").append(newDiv);
-}
+
+// function callGame(data) {
+//   let newDiv = $("<div class='gameSearch'>");
+//   let descriptionDiv = $("<div>")
+//   let newH6 = $("<h6>");
+//   newH6.text("Description: ")
+//   newDiv.append(descriptionDiv);
+//   descriptionDiv.append(newH6, data.games[0].description_preview);
+//   $("#infoDiv").append(newDiv);
+// }
+
+$("#signClick").on("click", function (event) {
+
+//sign up globals
+const signUpEmail = $("#signUpEmail");
+const signUpFirstname = $("#signUpFirstname");
+const signUpLastname = $("#signUpLastname");
+const signUpUsername = $("#signUpUsername");
+const signUpPassword = $("#signUpPassword");
 
 
-// //sign up globals
-// const signUpEmail = $("#signUpEmail");
-// const signUpFirstname = $("#signUpFirstname");
-// const signUpLastname = $("#signUpLastname");
-// const signUpUsername = $("#signUpUsername");
-// const signUpPassword = $("#signUpPassword");
-// const signUpButton = $("#signUpBtn");
-// const signUpForm = $("#signUpForm");
 
+let user = {
+    email: signUpEmail.val().trim(),
+    firstname: signUpFirstname.val().trim(),
+    lastname: signUpLastname.val().trim(),
+    username: signUpUsername.val().trim(),
+    password: signUpPassword.val().trim(),
+  };
 
+  $.ajax({
+    method: "POST",
+    url: "/user",
+    data: user
+  }).then(data => {
+    console.log(data)
+    //div needs to be created in user.handlebars
+    $("#").text(user)
+    
 
-// let user = {
-//     email: signUpEmail.val().trim(),
-//     firstname: signUpFirstname.val().trim(),
-//     lastname: signUpLastname.val().trim(),
-//     username: signUpUsername.val().trim(),
-//     password: signUpPassword.val().trim(),
-//   };
-//   return user;
+  })
+})
 
+})
 
