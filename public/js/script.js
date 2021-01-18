@@ -11,21 +11,41 @@ $("#searchClick").on("click", function (event) {
   }).then(data => {
     console.log(data)
     $("#gameName").text(name)
-    callGame(data)
+   
 
   })
 })
 
 
-// function callGame(data) {
-//   let newDiv = $("<div class='gameSearch'>");
-//   let descriptionDiv = $("<div>")
-//   let newH6 = $("<h6>");
-//   newH6.text("Description: ")
-//   newDiv.append(descriptionDiv);
-//   descriptionDiv.append(newH6, data.games[0].description_preview);
-//   $("#infoDiv").append(newDiv);
-// }
+const description = $(".descriptionLink")
+
+function generateDescription(data) {
+  console.log(data)
+  let newDiv = $("<div class='gameDesInfo'>");
+  let descriptionDiv = $("<div>")
+  let newH6 = $("<h5>");
+  newH6.text("Description: ")
+  newDiv.append(descriptionDiv);
+  descriptionDiv.append(newH6, data.games[0].description_preview);
+  $("#infoDiv").append(newDiv);
+}
+
+description.on("click", function (event) {
+
+  let name = $("#apiInput").val();;
+  let queryUrl = "https://api.boardgameatlas.com/api/search?name=" + name + "&client_id=nmzLLgP0nr"
+  $("#infoDiv").empty();
+  $.ajax({
+    method: "GET",
+    url: queryUrl
+  }).then(data => {
+
+    generateDescription(data)
+
+  })
+})
+
+
 
 $("#signClick").on("click", function (event) {
 
