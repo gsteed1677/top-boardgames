@@ -1,4 +1,5 @@
 const express = require("express");
+const expresshbs = require("express-handlebars");
 const session = require("express-session");
 const passport = require("./config/passport");
 
@@ -16,6 +17,14 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+ 
+app.engine('handlebars', expresshbs({ defaultLayout: 'main'}));
+app.set('view engine', 'handlebars')
+
+app.post('/user', function(req, res) {
+  var data = req.body
+  db.insert(data)
+})
 // Requiring our routes
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
