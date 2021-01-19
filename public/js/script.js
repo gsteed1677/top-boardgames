@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+const hide = $("#hide")
+hide.attr("class", "hide")
 //on click to get client api 
 $("#searchClick").on("click", function (event) {
 
@@ -11,40 +14,34 @@ $("#searchClick").on("click", function (event) {
   }).then(data => {
     console.log(data)
     $("#gameName").text(name)
-   
 
-  })
-})
-
-
-const description = $(".descriptionLink")
 
 function generateDescription(data) {
   console.log(data)
+  let gameImg = $("<img>").attr("src", data.games[0].image_url)
   let newDiv = $("<div class='gameDesInfo'>");
   let descriptionDiv = $("<div>")
   let newH6 = $("<h5>");
-  newH6.text("Description: ")
+  let imgSrc = $(".imgSrc")
+  let gameRules = $(".gameRules")
+  let gameRulesLink = gameRules.attr("src", data.games[0].rules_url)
+  gameRules.append(gameRulesLink)
+  imgSrc.append(gameImg)
   newDiv.append(descriptionDiv);
   descriptionDiv.append(newH6, data.games[0].description_preview);
   $("#infoDiv").append(newDiv);
 }
-
-description.on("click", function (event) {
-
-  let name = $("#apiInput").val();;
-  let queryUrl = "https://api.boardgameatlas.com/api/search?name=" + name + "&client_id=nmzLLgP0nr"
-  $("#infoDiv").empty();
-  $.ajax({
-    method: "GET",
-    url: queryUrl
-  }).then(data => {
-
-    generateDescription(data)
-
+$("#infoDiv").empty();
+generateDescription(data)
   })
 })
 
+
+// const description = $(".descriptionLink")
+
+// description.on("click", function (event) {
+
+// })
 
 
 $("#signClick").on("click", function (event) {
