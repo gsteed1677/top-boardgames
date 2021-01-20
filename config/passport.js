@@ -1,8 +1,7 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
-
 const db = require("../models");
-
+..
 // passport to use LocalStrat
 passport.use(new LocalStrategy(
   // Our user will sign in using an email, rather than a "username"
@@ -35,13 +34,21 @@ passport.use(new LocalStrategy(
 ));
 
 
-passport.serializeUser(function(user, cb) {
-  cb(null, user);
+passport.serializeUser((user, done) => {
+  done(null, user);
+
+passport.deserializeUser((user, done) => {
+  done(null, user);
 });
 
-passport.deserializeUser(function(obj, cb) {
-  cb(null, obj);
-});
+function isUserAuthenticated(req, res, next) {
+  if (req.user) {
+      next();
+  } else {
+      res.send('You must login!');
+  }
+}
+
 
 // Exporting our configured passport
 module.exports = passport;
