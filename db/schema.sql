@@ -6,7 +6,7 @@ USE top_boardgamesDB;
 CREATE TABLE users
 (
 	id int NOT NULL AUTO_INCREMENT,
-	user VARCHAR(20) UNIQUE NOT NULL,
+	userName VARCHAR(20) UNIQUE NOT NULL,
   firstName VARCHAR(20),
 	lastName VARCHAR(20),
   email VARCHAR(100),

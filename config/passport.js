@@ -1,7 +1,9 @@
-var passport = require("passport");
-var LocalStrategy = require("passport-local").Strategy;
-var db = require("../models");
-// Telling passport we want to use a Local Strategy. In other words, we want login with a username/email and password
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
+
+const db = require("../models");
+
+// passport to use LocalStrat
 passport.use(new LocalStrategy(
   // Our user will sign in using an email, rather than a "username"
   {
@@ -32,36 +34,14 @@ passport.use(new LocalStrategy(
   }
 ));
 
-// To help keep authentication state across HTTP requests,
-// Sequelize needs to serialize and deserialize the user
 
 passport.serializeUser(function(user, cb) {
   cb(null, user);
 });
+
 passport.deserializeUser(function(obj, cb) {
   cb(null, obj);
 });
+
 // Exporting our configured passport
 module.exports = passport;
-
-
-
-// const mongoose = require('mongoose');
-// const passport = require('passport');
-// const LocalStrategy = require('passport-local');
-
-// const Users = mongoose.model('Users');
-
-// passport.use(new LocalStrategy({
-//   usernameField: 'user[email]',
-//   passwordField: 'user[password]',
-// }, (email, password, done) => {
-//   Users.findOne({ email })
-//     .then((user) => {
-//       if(!user || !user.validatePassword(password)) {
-//         return done(null, false, { errors: { 'email or password': 'is invalid' } });
-//       }
-
-//       return done(null, user);
-//     }).catch(done);
-// }));
