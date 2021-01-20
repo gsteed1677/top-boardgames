@@ -104,15 +104,16 @@
         </div>
     </section>
 
-    <div class="tile is-parent" id="hide">
-        <article class="tile is-child notification is-success">
+    <div class="tile is-parent">
+        <article class="tile is-child notification is-success hide">
 
             <div class="content">
                 <p class="title" id="gameName"></p>
                 <p class="imgSrc">
                 </p>
                 <div class="card-content row cardContent">
-                    <h5 class='cardTime'>{{this.dataValues.max_playtime}} Play Time:</span>
+                    <h5 class='cardTime'>{{this.dataValues.max_playtime}} Play Time: </h5>
+                    <h5 class='price'>{{this.dataValues.msrp_text}} Cost: </h5>
 
 
                 </div>
@@ -120,8 +121,9 @@
                     <a class="ruleLink">Game Rules</a>
                 </div>
                 <div class="content">
-                    <a href="#" class='descriptionLink' data-name='{{this.game.dataValues.name}}'>Description</a>
-                    <!-- Content -->
+
+
+                    <a class="gameDes">Description</a>
                     <div class='container' id='infoDiv'></div>
                 </div>
             </div>
