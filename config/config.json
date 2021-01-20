@@ -2,8 +2,8 @@
  {
   "development": {
     "username": "root",
-    "password": "nissan",
-    "database": "top_boardgamesDB",
+    "password": "minel420",
+    "database": "topboardgames_DB",
     "host": "127.0.0.1",
 
     "dialect": "mysql"
