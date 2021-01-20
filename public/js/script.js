@@ -60,8 +60,7 @@ const signUpPassword = $("#signUpPassword");
 
 let user = {
 
-  var email  = $("#signUpEmail").val() || '';
-    // email: signUpEmail.val().trim(),
+    email: signUpEmail.val().trim(),
     firstname: signUpFirstname.val().trim(),
     lastname: signUpLastname.val().trim(),
     username: signUpUsername.val().trim(),
