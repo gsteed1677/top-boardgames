@@ -32,6 +32,7 @@ module.exports = function (app) {
 
     app.get('/about',  (req, res) => {
     res.render('about')
+
     })
   
 
@@ -70,3 +71,8 @@ module.exports = function (app) {
   //   res.sendFile(path.join(__dirname, "../public/user.html"));
   // });
 };
+
+  })
+  
+}
+

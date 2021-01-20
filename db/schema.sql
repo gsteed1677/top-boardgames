@@ -1,5 +1,6 @@
-DROP DATABASE IF EXISTS topboardgames_DB;
-CREATE database topboardgames_DB;
+DROP DATABASE IF EXISTS top_boardgamesDB;
+CREATE database top_boardgamesDB;
+
 
 -- Drops the blogger if it exists currently --
 DROP DATABASE IF EXISTS blogger;
@@ -8,6 +9,8 @@ CREATE DATABASE blogger;
 
 
 USE topboardgames_DB;
+USE top_boardgamesDB;
+
 
 CREATE TABLE users
 (
