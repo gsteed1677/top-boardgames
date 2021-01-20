@@ -1,6 +1,12 @@
 DROP DATABASE IF EXISTS topboardgames_DB;
 CREATE database topboardgames_DB;
 
+-- Drops the blogger if it exists currently --
+DROP DATABASE IF EXISTS blogger;
+-- Creates the "blogger" database --
+CREATE DATABASE blogger;
+
+
 USE topboardgames_DB;
 
 CREATE TABLE users
@@ -28,7 +34,3 @@ CREATE TABLE top100 (
 SELECT * FROM top100games;
 
 
--- Drops the blogger if it exists currently --
-DROP DATABASE IF EXISTS blogger;
--- Creates the "blogger" database --
-CREATE DATABASE blogger;

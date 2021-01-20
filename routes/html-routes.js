@@ -23,8 +23,8 @@ module.exports = function (app) {
   })
 
   app.get('/forum',  (req, res) => {
-    res.render('forum')
-  })
+  res.sendFile(path.join(__dirname, '../public/blog.html'));
+  });
 
   app.get('/recommended',  (req, res) => {
     res.render('recommended')
