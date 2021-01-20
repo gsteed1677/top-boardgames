@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    <link href="../public/styles/styles.css">
+    {{!--
+    <link href="/styles/styles.css"> --}}
     <title>Top Boardgames</title>
 
 </head>
@@ -110,7 +111,7 @@
                 <p class="imgSrc">
                 </p>
                 <div class="gameRules">
-                    Game Rules:
+                    <a class="ruleLink">Game Rules</a>
                 </div>
                 <div class="content">
                     <a href="#" class='descriptionLink' data-name='{{this.game.dataValues.name}}'>Description</a>
