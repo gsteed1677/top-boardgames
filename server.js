@@ -2,7 +2,9 @@ const express = require("express");
 const expresshbs = require("express-handlebars");
 const session = require("express-session");
 const passport = require("./config/passport");
-
+const htmlRouter = require('./routes/html-routes.js');
+const authorRouter = require('./routes/author-api-routes');
+const apiRouter = require('./routes/post-api-routes');
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
@@ -28,6 +30,12 @@ app.post('/user', function(req, res) {
 // Requiring our routes
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
+
+// Invoke routes
+htmlRouter(app);
+authorRouter(app);
+apiRouter(app);
+
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function () {
   app.listen(PORT, function () {
