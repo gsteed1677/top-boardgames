@@ -54,16 +54,19 @@ const signUpLastname = $("#signUpLastname");
 const signUpUsername = $("#signUpUsername");
 const signUpPassword = $("#signUpPassword");
 
+console.log(signUpEmail.val(), signUpFirstname.val(), signUpLastname.val(),signUpUsername.val(), signUpPassword.val());
 
 
-let user = {
 
-    email: signUpEmail.val().trim(),
-    firstname: signUpFirstname.val().trim(),
-    lastname: signUpLastname.val().trim(),
-    username: signUpUsername.val().trim(),
-    password: signUpPassword.val().trim(),
-  };
+
+// let user = {
+
+//     email: signUpEmail.val().trim(),
+//     firstname: signUpFirstname.val().trim(),
+//     lastname: signUpLastname.val().trim(),
+//     username: signUpUsername.val().trim(),
+//     password: signUpPassword.val().trim(),
+//   };
 
   $.ajax({
     method: "POST",
