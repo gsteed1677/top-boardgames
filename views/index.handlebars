@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    {{!--
+    <link href="/styles/styles.css"> --}}
     <title>Top Boardgames</title>
 
 </head>
@@ -32,7 +34,7 @@
 
             <div id="navbarBasic" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="/about">
+                    <a class="navbar-item" href="/">
                         Home
                     </a>
 
@@ -101,47 +103,16 @@
             <!-- <img src="https://images.unsplash.com/photo-1529488127598-5b1512330f89?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1349&q=80" alt="Side shot of board game"> -->
         </div>
     </section>
-    <TitleCard>
-        <div class="tile is-ancestor">
-            <div class="tile is-vertical is-8">
-                <div class="tile">
-                    <div class="tile is-parent is-vertical">
-                        <article class="tile is-child notification is-primary">
-                            <p class="title"></p>
-                            <p class="subtitle">New winners</p>
-                        </article>
-                        <article class="tile is-child notification is-warning">
-                            <p class="title">Things and Stuff</p>
-                            <p class="subtitle">Explanation tile</p>
-                        </article>
-                    </div>
-                    <div class="tile is-parent">
-                        <article class="tile is-child notification is-info">
-                            <p class="title">Popular Games</p>
-                            <figure class="image is-4by3">
-                                <img
-                                    src="https://images.unsplash.com/photo-1529488127598-5b1512330f89?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1349&q=80">
-                            </figure>
-                        </article>
-                    </div>
-                </div>
-                <div class="tile is-parent is-vertical">
-                    <article class="tile is-child notification is-danger">
-                        <p class="title">Resources</p>
-                        <div class="content">
-                            <!-- Content -->
-                        </div>
-                    </article>
-                </div>
-            </div>
-    </TitleCard>
 
-    <div class="tile is-parent">
+    <div class="tile is-parent" id="hide">
         <article class="tile is-child notification is-success">
             <div class="content">
                 <p class="title" id="gameName"></p>
-                <p class="subtitle">New games coming soon!
+                <p class="imgSrc">
                 </p>
+                <div class="gameRules">
+                    <a class="ruleLink">Game Rules</a>
+                </div>
                 <div class="content">
                     <a href="#" class='descriptionLink' data-name='{{this.game.dataValues.name}}'>Description</a>
                     <!-- Content -->
