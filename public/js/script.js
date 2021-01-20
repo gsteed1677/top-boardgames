@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-const hide = $("#hide")
-hide.attr("class", "hide")
+// const hide = $("#hide")
+// hide.attr("class", "hide")
 //on click to get client api 
 $("#searchClick").on("click", function (event) {
 
@@ -23,9 +23,10 @@ function generateDescription(data) {
   let descriptionDiv = $("<div>")
   let newH6 = $("<h5>");
   let imgSrc = $(".imgSrc")
-  let gameRules = $(".gameRules")
-  let gameRulesLink = gameRules.attr("src", data.games[0].rules_url)
-  gameRules.append(gameRulesLink)
+  let gameRules = $(".ruleLink")
+
+  gameRules.attr("href", data.games[0].rules_url)
+//   gameRules.append(gameRulesLink)
   imgSrc.append(gameImg)
   newDiv.append(descriptionDiv);
   descriptionDiv.append(newH6, data.games[0].description_preview);
