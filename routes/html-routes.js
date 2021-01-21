@@ -23,8 +23,8 @@ module.exports = function (app) {
   })
 
   app.get('/forum',  (req, res) => {
-    res.render('forum')
-  })
+  res.sendFile(path.join(__dirname, '../public/blog.html'));
+  });
 
   app.get('/recommended',  (req, res) => {
     res.render('recommended')
@@ -32,7 +32,24 @@ module.exports = function (app) {
 
     app.get('/about',  (req, res) => {
     res.render('about')
-  })
+
+    })
+  
+
+
+  app.get('/cms', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/cms.html'));
+  });
+
+  // blog route loads blog.html
+  app.get('/blog', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/blog.html'));
+  });
+
+ // authors route loads author-manager.html
+  app.get('/authors', (req, res) =>
+    res.sendFile(path.join(__dirname, '../public/author-manager.html'))
+  );
   // app.get("/signup", function (req, res) {
   //   // If the user already has an account send them to the members page
   //   if (req.user) {
@@ -54,3 +71,4 @@ module.exports = function (app) {
   //   res.sendFile(path.join(__dirname, "../public/user.html"));
   // });
 };
+
