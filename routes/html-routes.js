@@ -72,7 +72,3 @@ module.exports = function (app) {
   // });
 };
 
-  })
-  
-}
-
