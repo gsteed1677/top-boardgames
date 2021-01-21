@@ -34,4 +34,7 @@ module.exports = function (app) {
     res.render('about')
   })
   
+    app.get('/user',  (req, res) => {
+    res.render('user')
+  })
 }
