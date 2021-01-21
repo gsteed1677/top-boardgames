@@ -2,7 +2,7 @@
  {
   "development": {
     "username": "root",
-    "password": "nissan",
+    "password": "",
     "database": "top_boardgamesDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
