@@ -4,6 +4,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Author.associate = (models) => {
+   
     Author.hasMany(models.Post, {
       onDelete: 'cascade',
     });

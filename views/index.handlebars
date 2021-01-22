@@ -105,19 +105,22 @@
     </section>
 
     <div class="tile is-parent">
-        <article class="tile is-child notification is-success hide">
+        <article class="tile is-child hide">
 
-            <div class="content">
-                <p class="title" id="gameName"></p>
-                <p class="imgSrc">
-                </p>
+            <div class="content columns">
+
+                <div class="column is-one-third">
+                    <p class="title" id="gameName"></p>
+                    <p class="imgSrc">
+                    </p>
+                </div>
                 <div class="card-content row cardContent">
                     <h5 class='cardTime'>{{this.dataValues.max_playtime}} Play Time: </h5>
                     <h5 class='price'>{{this.dataValues.msrp_text}} Cost: </h5>
 
 
                 </div>
-                <div class="gameRules">
+                <div class="gameRules column">
                     <a class="ruleLink">Game Rules</a>
                 </div>
                 <div class="content">
@@ -137,13 +140,13 @@
 
 
 <!--Footer-->
-<footer class="footer">
+{{!-- <footer class="footer contact-footer">
     <div class="content has-text-centered">
         <p>
             <strong>Top Board Games</strong> by <a href="https://jgthms.com">Team Trenton 1</a>.
         </p>
     </div>
-</footer>
+</footer> --}}
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

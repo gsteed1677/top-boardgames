@@ -13,14 +13,15 @@ i.fas {
 }
 
 body {
-  background: black;
+  background: grey;
+  /* height: 100vh; */
 }
 
 button.submit {
   float: right;
 }
 
-#submit-author{
+#submit-author {
   margin: 5px;
 }
 
@@ -67,3 +68,15 @@ button.edit {
 .top-30 {
   margin-top: 30px;
 }
+
+.contact-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* .login-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */

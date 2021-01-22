@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Post.associate = (models) => {
-    
+   
     Post.belongsTo(models.Author, {
       foreignKey: {
         allowNull: false,

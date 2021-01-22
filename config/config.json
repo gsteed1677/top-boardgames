@@ -2,7 +2,7 @@
  {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "Regulater187$",
     "database": "top_boardgamesDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -15,10 +15,12 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "use_env_variable": "JAWSDB_URL",
+    "username": "i9eemwalm5este2q",
+    "password": "ces4cd43pp0x11jg",
+    "database": "hy23vyfwqlfbzy7x",
+    "host": "z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
+  
 }
