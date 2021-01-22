@@ -37,7 +37,7 @@ module.exports = function (app) {
   
 
 
-  app.get('/cms', (req, res) => {
+ app.get('/cms', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/cms.html'));
   });
 
