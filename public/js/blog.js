@@ -1,10 +1,8 @@
-// Wait for the DOM to completely load before we run our JS
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM loaded! 🚀');
 
   const blogContainer = document.querySelector('.blog-container');
 
-  // Variable to hold our posts
   let posts;
 
   const getPosts = (author) => {
@@ -32,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch((error) => console.error('Error:', error));
   };
 
-  // Get a blog post from a specific author
   const url = window.location.search;
   let authorId;
   if (url.indexOf('?author_id=') !== -1) {
@@ -42,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     getPosts();
   }
 
-  // Front end call to DELETE a post
   const deletePost = (id) => {
     fetch(`/api/posts/${id}`, {
       method: 'DELETE',
@@ -52,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }).then(getPosts());
   };
 
-  // Create HTML rows for the blog container
   const initializeRows = () => {
     blogContainer.innerHTML = '';
     const postsToAdd = [];
@@ -72,13 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const newPostCardHeading = document.createElement('div');
     newPostCardHeading.classList.add('card-header');
 
-    // Delete button
+ 
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'x';
     deleteBtn.classList.add('delete', 'btn', 'btn-danger');
     deleteBtn.addEventListener('click', handlePostDelete);
 
-    // Edit button
     const editButton = document.createElement('button');
     editButton.textContent = 'EDIT';
     editButton.classList.add('edit', 'btn', 'btn-info');
@@ -114,7 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return newPostCard;
   };
 
-  // Helper function to display something when there are no posts
   const displayEmpty = (id) => {
     const query = window.location.search;
     let partial = '';
@@ -130,7 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
     blogContainer.append(messageH2);
   };
 
-  // Handle when we click the delete post button
   const handlePostDelete = (e) => {
     const currentPost = JSON.parse(
       e.target.parentElement.parentElement.dataset.post
@@ -139,7 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
     deletePost(currentPost.id);
   };
 
-  // Handle when we click the edit post button
   const handlePostEdit = (e) => {
     const currentPost = JSON.parse(
       e.target.parentElement.parentElement.dataset.post
