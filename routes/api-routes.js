@@ -1,15 +1,13 @@
 var db = require("../models");
 var passport = require("../config/passport");
 
-
 module.exports = function (app) {
-//use passport to authenticate with the local strategy - push error if given bad login paramaters
+//use passport to authenticate with the local strategy - push error if given bad login 
   
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
     res.json(req.user);
   });
 
- 
   app.post("/api/signup", function (req, res) {
     db.User.create({
       user_name: req.body.user_name,
@@ -25,7 +23,7 @@ module.exports = function (app) {
       });
   });
 
-  // Route for logging user out
+  //Route for logging out
   app.get("/api/logout", function (req, res) {
     req.logout();
     res.redirect("/");

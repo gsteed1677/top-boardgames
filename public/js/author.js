@@ -1,11 +1,9 @@
-// Wait for the DOM to completely load before we run our JS
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM loaded! 🚀');
 
   const nameInput = document.getElementById('author-name');
   const authorList = document.querySelector('tbody');
 
-  // Create an author
   const insertAuthor = (authorData) => {
     fetch('/api/authors', {
       method: 'POST',
@@ -18,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch((err) => console.error(err));
   };
 
-  // Handle when the author form is submitted
   const handleAuthorFormSubmit = (e) => {
     e.preventDefault();
 
@@ -36,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .getElementById('author-form')
     .addEventListener('submit', handleAuthorFormSubmit);
 
-  // Event handler for the delete author button
   const handleDeleteButtonPress = (e) => {
     const { id } = e.target.parentElement.parentElement;
     fetch(`/api/authors/${id}`, {
@@ -47,19 +43,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }).then(getAuthors);
   };
 
-  // Create list row for authors
   const createAuthorRow = (authorData) => {
     const tr = document.createElement('tr');
     tr.setAttribute('data-author', JSON.stringify(authorData));
 
-    // Set each author's ID on the element itself
     tr.id = authorData.id;
 
     const td = document.createElement('td');
     td.textContent = authorData.name;
-    tr.appendChild(td);
-
-    // Element to show how many posts
+      tr.appendChild(td);
+      
     const lengthTd = document.createElement('td');
     if (authorData.Posts) {
       lengthTd.textContent = authorData.Posts.length;
@@ -68,27 +61,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     tr.appendChild(lengthTd);
 
-    // "Go to posts" link
     const postsLink = document.createElement('td');
     postsLink.innerHTML = `<td><a href='/blog?author_id=${authorData.id}'>Go to Posts</a></td>`;
     tr.appendChild(postsLink);
 
-    // "Create a post" link
+   
     const createLink = document.createElement('td');
     createLink.innerHTML = `<td><a href='/cms?author_id=${authorData.id}'>Create a Post</a></td>`;
     tr.appendChild(createLink);
 
-    // "Delete author" link
+   
     const deleteLink = document.createElement('td');
     deleteLink.innerHTML = `<td><a style='cursor:pointer;color:red' class='delete-author'>Delete Author</a></td>`;
     deleteLink.addEventListener('click', handleDeleteButtonPress);
     tr.appendChild(deleteLink);
 
-    // Return the table row
+    
     return tr;
   };
 
-  // Helper function to render content when there are no authors
+  
   const renderEmpty = () => {
     const alertDiv = document.createElement('div');
     alertDiv.classList.add('alert', 'alert-danger');
@@ -111,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Grab all the authors
+  
   const getAuthors = () => {
     console.log('Get authors is getting called');
     fetch('/api/authors', {
@@ -122,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        // console.log('Success in getting authors:', authors);
         const rowsToAdd = [];
         for (let i = 0; i < data.length; i++) {
           rowsToAdd.push(createAuthorRow(data[i]));
@@ -133,6 +124,5 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch((error) => console.error('Error:', error));
   };
 
-  // Get the list of authors
   getAuthors();
 });
